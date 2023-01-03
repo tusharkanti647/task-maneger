@@ -5,6 +5,8 @@ item.addEventListener('dragstart', dragStart);
 
 function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.id);
+    const id = e.dataTransfer.getData('text/plain');
+    console.log(id);
     setTimeout(() => {
         e.target.classList.add('hide');
     }, 0);

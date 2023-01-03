@@ -1,4 +1,4 @@
-
+/* back ground of the page style */
 * {
     margin: 0;
     padding: 0;
@@ -126,9 +126,21 @@
     }
   }
   
+/* hader and sound style */
+.main-header{
+  font-size: 50px;
+  font-weight: 800;
+  font-style: italic;
+}
+.sound-icon-div{
+
+}
+#sound-icon{
+  font-size: 50px;
+}
 
 
-
+/* container and taskbar styles */
 .container{
     margin: auto;
     margin-top: 30px;
@@ -144,23 +156,9 @@
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-/* .in_progress{
-    width: 200px;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.in_review{
-    width: 200px;
-    height: 600px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.done{
-    width: 200px;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-} */
 
 
+/* each task style */
 .task_add_icon{
   margin-right: 30px;
   font-size: 30px;
@@ -206,6 +204,11 @@
   font-size: 30px;
   margin-left: 10px;
 }
+/* model display and hide and show */
+.hidden > .modal{
+  display: block;
+}
+
 
 /* input style */
 /* .task-input{
@@ -256,6 +259,8 @@
   margin-left: 8px;
 }
 
+
+/* model style */
 /* The Modal (background) */
 .modal {
   display: none;/*  Hidden by default */
@@ -270,9 +275,6 @@
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
-
-/* model style */
 
 /* Modal Content  #fefefe*/
 .modal-content {
@@ -291,7 +293,6 @@
   font-weight: bold;
 }
 
-.close:hover,
 .close:focus {
   color: rgb(231, 9, 9);
   text-decoration: none;
