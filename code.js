@@ -260,11 +260,15 @@ mainFunction = (eachTaskBar) =>{
             const ind = findeTaskObjectIndex(index, eachTask.id);
             storeArray[index].splice(ind, 1);
 
+            const task = document.getElementById(eachTask.id);
+            task.innerHTML = "";
+            task.classList.remove("task");
+
             const audio = new Audio("./sound/taskDelete.mp3");
             audio.play();
 
-            i=1;
-            fun();
+            // i=1;
+            // fun();
         })
 
 
@@ -440,8 +444,8 @@ mainFunction = (eachTaskBar) =>{
 
                     storeArray[indI].splice(indJ, 1);
 
-                    i=1;
-                    fun();
+                    //i=1;
+                    //fun();
                 }
             }
          }

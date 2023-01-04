@@ -298,3 +298,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1050px) {
+  .container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 100px ;
+    grid-row-gap: 50px;
+  }
+
+  .task-bar{
+    width: 300px;
+  }
+}
