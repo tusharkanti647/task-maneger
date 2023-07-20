@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>task maneger</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script defer src="./code.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="wrapper">
+      
 
-        <div class="header-div"><header class="main-header">TASK MANAGER APP</header></div>
-        <div class="sound-icon-div"><img src="./icon/volume_on.png" alt="volume_on" class="sound-icon" id="sound_icon_on"></div>
-        <section >
-            <div class="container" id="container">
-                <div class="task-bar" id="open">
-                    <!-- <div class="header-div"><header class="header">OPEN</header></div> -->
+      <!-- <h1>Bubbles Animation</h1> -->
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+      <div class="dot-div"><span class="dot"></span></div>
+    </div>
 
-                    <!-- <div class="task">
+
+    <div class="header-div">
+        <header class="main-header">TASK MANAGER APP</header>
+      </div>
+      <div class="sound-icon-div">
+        <img
+          src="./icon/volume_on.png"
+          alt="volume_on"
+          class="sound-icon"
+          id="sound_icon_on"
+        />
+      </div>
+
+    <section>
+      <div class="container" id="container">
+        <div class="task-bar" id="open">
+          <!-- <div class="header-div"><header class="header">OPEN</header></div> -->
+
+          <!-- <div class="task">
                         <div class=" task-header-div"><header class="task-header">OPEN</header></div>
 
                         <div class="task-body">
@@ -62,13 +98,13 @@
                         
                     </div> -->
 
-                    <!-- addIconBox and icon -->
-                    <!-- <div class="add-icon-box">
+          <!-- addIconBox and icon -->
+          <!-- <div class="add-icon-box">
                         <i class="fa-solid fa-thumbtack task_add_icon" ></i>
                     </div> -->
 
-                    <!-- take all input  -->
-                    <!-- <div class="task-input">
+          <!-- take all input  -->
+          <!-- <div class="task-input">
                         <label for="task-header-input">Enter The Task Heading</label>
                         <div><input type="text" id="task-header-input" class="task-header-input"></div>
 
@@ -81,87 +117,82 @@
 
                         </div>
                     </div> -->
-                </div>
-
-                <div class="task-bar" id="in-progress">
-                    <!-- <div class="header-div"><header class="header">IN PROGRESS</header></div> -->
-                </div>
-
-                <div class="task-bar" id="in-review">
-                    <!-- <div class="header-div"><header class="header">IN REVIEW</header></div> -->
-                </div>
-
-                <div class="task-bar" id="done">
-                    <!-- <div class="header-div"><header class="header">DONE</header></div> -->
-                </div>
-
-            </div>
-        </section>
- 
-
-        <div class="modal" id="myModal">
-            <div class="modal-content">
-                <div class="task-input">
-                    <label  for="task-status-input">Enter Task Status</label>
-                    <select class="task-status-input divMargin font-siz-1" id="task-status-input" name="task-status-input">
-                        <option value="open">open</option>
-                        <option value="in-progress">in-progress</option>
-                        <option value="in-review">in-review</option>
-                        <option value="done">done</option>
-                    </select>
-                    
-                    <br>
-
-                    <label for="task-header-input">Enter The Task Heading</label>
-                    <input class="task-header-input divMargin font-siz-1" id="task-header-input">
-
-                    <br>
-
-                    <label for="task-description-input">Enter The Task Description</label>
-                    <textarea class="task-description-input divMargin font-siz-1" id="task-description-input"></textarea>
-                    
-                    <br>
-                    
-                    <div class="save-cancel-button-wrapper divMargin">
-                        <button id="save_button" class="button success add-button">Save</button>
-                        <button id="cancel_button" class="button delete">Cancel</button>
-                    </div>
-                
-                </div>
-            </div>
         </div>
 
-        
-        <!-- description show -->
-        <div class="modal" id="descriptionModal">
-            <div class="modal-content">
-                <div class="close">&times;</div>
-                    <div class="header-div"><h2 class="header font-siz" id="description_heading"></h2></div>
-
-                    <div class="divMargin"><h2 id="description_statatus">Task Status :-  OPEN</h2></div>
-                    
-                    <div class="divMargin"><h2 id="statatus">Task Description</h2></div>
-                    <div class="divMargin" id="task_modal_description"><p id="p_description">The Task Description</p></div>
-            </div>
+        <div class="task-bar" id="in-progress">
+          <!-- <div class="header-div"><header class="header">IN PROGRESS</header></div> -->
         </div>
 
-        <!-- <h1>Bubbles Animation</h1> -->
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
-        <div class="dot-div"><span class="dot"></span></div>
+        <div class="task-bar" id="in-review">
+          <!-- <div class="header-div"><header class="header">IN REVIEW</header></div> -->
+        </div>
+
+        <div class="task-bar" id="done">
+          <!-- <div class="header-div"><header class="header">DONE</header></div> -->
+        </div>
       </div>
-   
-</body>
+    </section>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <div class="task-input">
+          <label for="task-status-input">Enter Task Status</label>
+          <select
+            class="task-status-input divMargin font-siz-1"
+            id="task-status-input"
+            name="task-status-input"
+          >
+            <option value="open">open</option>
+            <option value="in-progress">in-progress</option>
+            <option value="in-review">in-review</option>
+            <option value="done">done</option>
+          </select>
+
+          <br />
+
+          <label for="task-header-input">Enter The Task Heading</label>
+          <input
+            class="task-header-input divMargin font-siz-1"
+            id="task-header-input"
+          />
+
+          <br />
+
+          <label for="task-description-input">Enter The Task Description</label>
+          <textarea
+            class="task-description-input divMargin font-siz-1"
+            id="task-description-input"
+          ></textarea>
+
+          <br />
+
+          <div class="save-cancel-button-wrapper divMargin">
+            <button id="save_button" class="button success add-button">
+              Save
+            </button>
+            <button id="cancel_button" class="button delete">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- description show -->
+    <div class="modal" id="descriptionModal">
+      <div class="modal-content">
+        <div class="close">&times;</div>
+        <div class="header-div">
+          <h2 class="header font-siz" id="description_heading"></h2>
+        </div>
+
+        <div class="divMargin">
+          <h2 id="description_statatus">Task Status :- OPEN</h2>
+        </div>
+
+        <div class="divMargin"><h2 id="statatus">Task Description</h2></div>
+        <div class="divMargin" id="task_modal_description">
+          <p id="p_description">The Task Description</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
