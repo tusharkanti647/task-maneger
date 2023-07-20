@@ -134,19 +134,18 @@
 }
 .sound-icon-div {
   display: flex;
-  width: 100px;
+  width: 110px;
   justify-content: end;
   margin-bottom: 20px;
 }
 
 .sound-icon-div > img {
   cursor: pointer;
+  width: 45px;
 }
 
 /* container and taskbar styles */
 .container {
-  
-
   margin-top: 30px;
   margin-bottom: 60px;
   width: 90%;
@@ -193,16 +192,20 @@
   margin: 10px;
 }
 .font-siz {
-  font-size: 40px;
+  font-size: 2em;
+  font-weight: 500;
+}
+#description_statatus, #statatus{
+  font-size: 1.3em;
+  font-weight: 400;
 }
 .font-siz-1 {
   font-size: 20px;
 }
 #task_modal_description {
-  width: 400px;
+  width: 80%;
   border: solid 2px hsl(0, 0%, 100%);
   border-radius: 10px;
-
   font-size: 20px;
   padding: 10px;
 }
@@ -226,12 +229,12 @@
 }
 .task_edit_icon {
   color: green;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
 }
 .task_delete_icon {
   color: rgb(195, 80, 80);
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -240,10 +243,14 @@
   display: block;
 }
 
-.task-status-input,
+.task-status-input{
+  background-color: #caf0f8;
+  width: 40%; 
+}
 .task-header-input,
 .task-description-input {
   background-color: #caf0f8;
+  width: 70%;
 }
 
 textarea {
@@ -318,7 +325,6 @@ textarea {
   width: 40%;
 
   color: hsl(0, 0%, 100%);
-
   font-size: 24px;
 }
 
@@ -348,6 +354,9 @@ textarea {
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); */
   }
+  .modal-content{
+    width: 60%;
+  }
   .task-bar {
     width: 90%;
   }
@@ -369,6 +378,9 @@ textarea {
   .task-bar {
     width: 90%;
   }
+  .modal-content{
+    font-size: 19px;
+  }
 }
 @media only screen and (max-width: 420px) {
   body {
@@ -386,6 +398,9 @@ textarea {
   .task-bar {
     width: 70%;
   }
+  .modal-content{
+    font-size: 17px;
+  }
 }
 @media only screen and (max-width: 250px) {
   body {
@@ -396,5 +411,8 @@ textarea {
   }
   .task-bar {
     width: 90%;
+  }
+  .modal-content{
+    font-size: 15px;
   }
 }
